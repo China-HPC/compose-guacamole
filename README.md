@@ -14,8 +14,8 @@ Assuming you already have a working Docker installation and `docker-compose`,
 setup is really easy.
 
 ```
-git clone git@github.com:BrowncoatShadow/compose-guacamole.git
-cd docker-compose-guacamole
+git clone https://github.com/China-HPC/compose-guacamole.git
+cd compose-guacamole
 docker-compose up -d
 ```
 
