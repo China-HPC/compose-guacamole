@@ -27,3 +27,8 @@ mysql -u guacamole -p user guacamole < initdb.sql
 ```
 
 6. 编辑.env环境变量，保证数据库相关环境变量和你设置的一致。
+7. 启动编排:
+
+```
+docker-compose up -d
+```
