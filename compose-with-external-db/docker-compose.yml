@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  guacd:
+    hostname: guacd
+    image: guacamole/guacd
+    restart: always
+  guacamole:
+    image: chinahpc/guacamole
+    restart: always
+    ports:
+      - 8080:8080
+    links:
+      - guacd
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: ${MYSQL_HOSTNAME}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+volumes:
+  data:
